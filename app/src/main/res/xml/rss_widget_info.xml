@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+		android:minWidth="@dimen/widget_min_width"
+		android:minHeight="@dimen/widget_min_height"
+		android:configure="ilya.rsswidget.ConfigRssWidgetActivity"
+		android:updatePeriodMillis="0"
+		android:previewImage="@mipmap/ic_launcher"
+		android:initialLayout="@layout/rss_widget"
+		android:resizeMode="horizontal|vertical"
+		android:widgetCategory="home_screen"/>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<dimen name="indent_normal">8dp</dimen>
+	<dimen name="indent_large">16dp</dimen>
+	<dimen name="corners_background">2dp</dimen>
+	<!--ширина поумолчанию 3 ячейки-->
+	<dimen name="widget_min_width">250dp</dimen>
+	<!--высота поумолчанию 1 ячейка-->
+	<dimen name="widget_min_height">40dp</dimen>
+</resources>

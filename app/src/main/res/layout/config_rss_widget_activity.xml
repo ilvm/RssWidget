@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/indent_large"
+		android:orientation="vertical">
+
+	<EditText
+			android:id="@+id/config_rss_widget_activity_edit_link"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:textAppearance="?android:textAppearanceMedium"
+			android:hint="@string/hint_edit_link"
+			android:text="https://news.yandex.ru/games.rss"/>
+
+	<Button
+			android:id="@+id/config_rss_widget_activity_button_apply"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginTop="@dimen/indent_normal"
+			android:text="@string/button_apply"/>
+</LinearLayout>

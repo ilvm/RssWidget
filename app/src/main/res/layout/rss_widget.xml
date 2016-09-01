@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:paddingTop="@dimen/indent_large"
+		android:paddingBottom="@dimen/indent_large"
+		android:orientation="horizontal"
+		android:background="@drawable/rss_widget_background"
+		tools:ignore="contentDescription">
+
+	<ImageButton
+			android:id="@+id/rss_widget_button_prev"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/indent_normal"
+			android:src="@drawable/ic_arrow_left"
+			android:background="?android:selectableItemBackground"/>
+
+	<LinearLayout
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_gravity="center"
+			android:orientation="vertical">
+
+		<TextView
+				style="@style/Text.Title"
+				android:id="@+id/rss_widget_text_title"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="1"
+				android:ellipsize="end"
+				tools:text="Заголовок новости"/>
+
+		<TextView
+				style="@style/Text.Description"
+				android:id="@+id/rss_widget_text_description"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:maxLines="2"
+				android:ellipsize="end"
+				tools:text="Текст новости"/>
+	</LinearLayout>
+
+	<ImageButton
+			android:id="@+id/rss_widget_button_next"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:padding="@dimen/indent_normal"
+			android:src="@drawable/ic_arrow_right"
+			android:background="?android:selectableItemBackground"/>
+</LinearLayout>

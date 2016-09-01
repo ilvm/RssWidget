@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">Rss Widget</string>
+	<string name="hint_edit_link">Введите адрес rss канала</string>
+	<string name="button_apply">Применить</string>
+	<string name="message_error_input_url">Не верно введен адрес RSS</string>
+	<string name="message_error_widget">Неудалось отобразить данные</string>
+</resources>
