@@ -35,8 +35,6 @@ public enum DatabaseFactory {
 
 	public List<RssItem> getRssLisByWidgetId(String widgetId) {
 
-		final List<RssItem> result = new ArrayList<>();
-
 		final String[] projection = {
 				DatabaseEntry.COLUMN_NAME_TITLE,
 				DatabaseEntry.COLUMN_NAME_DESCRIPTION
@@ -44,11 +42,16 @@ public enum DatabaseFactory {
 
 		final Cursor cursor = mDatabase.query(DatabaseEntry.TABLE_NAME, projection,
 				DatabaseEntry.COLUMN_NAME_WIDGET_ID + "=?", new String[]{widgetId}, null, null, null);
+		if (cursor.getCount() == 0) {
+			return null;
+		}
+
+		final List<RssItem> result = new ArrayList<>();
 		cursor.moveToFirst();
-		while (cursor.isLast()) {
+		do {
 			result.add(new RssItem(cursor.getString(cursor.getColumnIndex(DatabaseEntry.COLUMN_NAME_TITLE)),
 					cursor.getString(cursor.getColumnIndex(DatabaseEntry.COLUMN_NAME_DESCRIPTION))));
-		}
+		} while (cursor.moveToNext());
 
 		cursor.close();
 		return result;
